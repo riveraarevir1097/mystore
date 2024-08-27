@@ -1,0 +1,1283 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Variables CSS */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --light-color: #fff;
+  --dark-background: #333;
+  --dark-text: #f7f7f7;
+  --gray-background: #f7f7f7;
+  --gray-border: #ddd;
+  --box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  --transition-ease: 0.3s ease;
+  --font-family: "Roboto", sans-serif;
+  --highlight-color: #ff4d4d;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-background);
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-color);
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color var(--transition-ease);
+  }
+
+  nav a:hover {
+    color: #888;
+  }
+  margin: 5px;
+  transition: background-color 5s ease;
+}
+
+header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--light-color);
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu1 .logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu1 .logo img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.menu1 .logo h1 {
+  margin-left: 15px; /* Ajuste del margen para destacar más */
+  font-size: 30px; /* Aumenta el tamaño del texto del logo */
+  color: var(--highlight-color); /* Color destacado para el logo */
+}
+
+.menu1 h1 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.menu2 .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+.navbar ul li button,
+nav a {
+  padding: 8px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--dark-background); /* Mismos bordes para todos los botones */
+  background: var(--light-color);
+  color: var(--dark-background);
+  cursor: pointer;
+  transition: background-color var(--transition-ease),
+    border-color var(--transition-ease);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbar ul li .login {
+  background-color: var(--dark-background);
+  color: var(--light-color);
+}
+
+.navbar ul li .signin {
+  background-color: var(--dark-background);
+  color: var(--light-color);
+}
+
+.navbar ul li button:hover,
+nav a:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  background: var(--light-color);
+  color: var(--dark-background);
+  cursor: pointer;
+  transition: background-color var(--transition-ease),
+    border-color var(--transition-ease);
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Botón de Modo Oscuro */
+#darkModeButton {
+  background: black;
+  border: black;
+  color: var(--light-color);
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #444;
+}
+
+nav a:hover {
+  background-color: var(--button-hover);
+  border-color: var(--light-color);
+}
+
+.containerhome {
+  padding: 20px;
+}
+
+.section {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* Flip Card */
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+  position: relative;
+}
+
+.divider span::before {
+  content: "or";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--light-color);
+  padding: 0 10px;
+  color: #aaa;
+}
+
+.social-login button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gray-border);
+  background-color: var(--light-color);
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: background-color var(--transition-ease),
+    border-color var(--transition-ease);
+}
+
+.social-login button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social-login button:hover {
+  color: var(--light-color);
+}
+
+.social-login .google-btn:hover {
+  background-color: #4285f4;
+  border-color: #4285f4;
+}
+
+.social-login .twitter-btn:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.social-login .instagram-btn:hover {
+  background-color: #e1306c;
+  border-color: #e1306c;
+}
+
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.extra-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color var(--transition-ease);
+}
+
+.extra-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Productos */
+.main-container {
+  padding: 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: var(--light-color);
+  border: 1px solid var(--gray-border);
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product-card .btn-add-to-cart {
+  background: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color var(--transition-ease);
+}
+
+.product-card .btn-add-to-cart:hover {
+  background-color: var(--secondary-color);
+}
+/*Products end */
+
+/* Footer */
+.footer {
+  background: gray;
+  color: var(--light-color);
+  padding: 80px 0;
+  text-align: center;
+  border-top: 1px solid rgb(207, 207, 207);
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-links {
+  width: 25%;
+  padding: 0 15px;
+  display: inline;
+}
+
+.footer-links h4 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 15px;
+  position: relative;
+  font-size: 1em;
+  transition: transform var(--transition-ease);
+}
+
+.footer-links ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 45%;
+  height: 2px;
+  background: #333;
+  transform: scaleX(0);
+  transition: transform var(--transition-ease);
+  transform-origin: right;
+}
+
+.footer-links ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.social-link a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: black;
+  font-size: 18px;
+  margin: 0 10px 10px 0;
+  transition: background-color var(--transition-ease);
+}
+
+.social-link a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Home Section Start */
+.home-section {
+  padding: 3rem 5%;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.home-welcome h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.home-welcome p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.home-highlights {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+
+.home-highlights h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.home-highlights .highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.home-highlights .highlight-item {
+  flex: 1;
+  min-width: 250px;
+  padding: 2rem;
+  background: var(--light-color);
+  color: #333;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-ease),
+    box-shadow var(--transition-ease);
+}
+
+.home-highlights .highlight-item h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.home-highlights .highlight-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.home-highlights .highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-benefits {
+  margin-bottom: 4rem;
+}
+
+.home-benefits h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.home-benefits .benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.home-benefits .benefit-item {
+  flex: 1;
+  min-width: 250px;
+  padding: 2rem;
+  background: var(--light-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-ease),
+    box-shadow var(--transition-ease);
+}
+
+.home-benefits .benefit-item h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.home-benefits .benefit-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.home-benefits .benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-testimonials {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.home-testimonials h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.home-testimonials p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.home-subscribe {
+  text-align: center;
+  padding: 2.5rem;
+  background: #f1f1f1;
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+
+.home-subscribe h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.home-subscribe p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.home-subscribe input[type="email"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.home-subscribe button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  cursor: pointer;
+  transition: background-color var(--transition-ease);
+}
+
+.home-subscribe button:hover {
+  background-color: var(--secondary-color);
+}
+
+.home-cta {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.home-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.home-cta p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.home-cta .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-ease);
+  text-decoration: none;
+}
+
+.home-cta .btn:hover {
+  background-color: var(--secondary-color);
+}
+/* Main page*/
+.main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+.input-padron,
+textarea,
+select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-padron:focus,
+textarea:focus,
+select:focus {
+  background-color: #fff;
+  border-color: #888;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+legend {
+  color: #888;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+label input[type="radio"],
+label input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  color: #555;
+}
+
+.enviar {
+  background-color: #333;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.enviar:hover {
+  background-color: #555;
+  transform: scale(1.02);
+}
+
+/* Footer start */
+:root {
+  --highlight-color: #ff8c00; /* Color destacado para el logo y hover */
+  --dark-background: #333; /* Color de fondo oscuro */
+  --light-color: #f7f7f7; /* Color claro para texto */
+  --secondary-color: #555; /* Color secundario para hover y fondos */
+  --transition-ease: 1s; /* Tiempo de transición */
+}
+.footer {
+  background-color: var(--dark-background);
+  color: var(--light-color);
+  padding: 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo img {
+  border-radius: 50%;
+  transition: transform var(--transition-ease);
+  font-size: 30px; /* Tamaño del texto del logo */
+  color: var(--highlight-color); /* Color destacado para el logo */
+}
+
+.footer-logo img:hover {
+  transform: scale(2.1);
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.footer-links li {
+  display: inline;
+
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer-links a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--dark-background);
+  transition: background-color var(--transition-ease),
+    color var(--transition-ease);
+}
+
+.footer-links a:hover {
+  background-color: var(--highlight-color);
+  color: var(--dark-background);
+}
+
+/* Styling for subscribe section */
+.footer-subscribe p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-subscribe form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-subscribe input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.footer-subscribe button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-ease);
+}
+
+.footer-subscribe button:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Styling for social media icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social .social-icon img {
+  transition: transform var(--transition-ease);
+}
+
+.footer-social .social-icon img:hover {
+  transform: rotate(360deg);
+}
+
+/* Styling for footer bottom */
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* About us start/**/
+/* Styling for the 'About Us' section */
+.about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow to ensure background image doesn't get clipped */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* Container for scrollable content */
+.scroll-container {
+  width: 100%; /* Full width */
+  max-width: 100%; /* Ensure it doesn't exceed viewport width */
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Flex container for the content inside 'About Us' section */
+.content-about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Styling for the text boxes */
+.mystore-text-box {
+  flex: 1 1 calc(50% - 40px);
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 1.5s ease, box-shadow 1.3s ease,
+    background-color 3s ease; /* Added background-color transition */
+  position: relative;
+  overflow: hidden; /* Ensure child elements don't overflow */
+}
+
+/* Styling for images within the text boxes */
+.mystore-text-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 1s ease, opacity 0.3s ease; /* Added opacity transition */
+}
+
+/* Styling for headings within text boxes */
+.mystore-text-box h1 {
+  margin: 0 0 15px;
+  font-size: 24px;
+  color: #333; /* Default text color */
+  position: relative; /* For the pseudo-element */
+}
+
+/* Styling for paragraphs within text boxes */
+.mystore-text-box p {
+  font-size: 14px;
+  color: #555; /* Default text color */
+}
+
+/* Hover effects for the text boxes */
+.mystore-text-box:hover {
+  :(-15px)scale(1.0) ; /* Added scale effect for a more modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Slightly more opaque background on hover */
+}
+
+/* Hover effects for images within the text boxes */
+.mystore-text-box:hover img {
+  transform: scale(2);
+  opacity: 0.2; /* Slightly transparent effect on hover */
+}
+
+/* Added pseudo-element for dynamic border animation */
+.mystore-text-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px solid #333;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Transition for border animation */
+  z-index: 0; /* Ensure it stays behind the text and images */
+}
+
+.mystore-text-box:hover::before {
+  transform: scale(0); /* Slightly enlarge the border on hover */
+}
+
+/* Ensure text and images stay above the pseudo-element */
+.mystore-text-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Classes for dark and light text depending on background */
+.dark-text {
+  color: #000; /* White text for dark backgrounds */
+}
+
+.light-text {
+  color: #333; /* Dark text for light backgrounds */
+}
+
+/* About us ending/*
+/*Login start/*
+/* Styles specific to Login page */
+
+.login-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  width: 85%;
+  position: relative;
+}
+
+.background-image-login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%; /* Adjust width as needed */
+  height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png")
+    no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  transform: scale(0.2); /* Initial size of the background image */
+  transition: transform 4s; /* Smooth transition for scaling effect */
+}
+
+.login-container:hover .background-image-login {
+  transform: scale(
+    1
+  ); /* Scale the background image to its full size on hover */
+}
+
+.login-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  position: relative;
+  z-index: 1; /* Ensure login box is above background */
+  margin-left: 40px; /* Margin to create space between the login box and the background */
+}
+
+.loginlogo {
+  margin-bottom: 20px; /* Adjust spacing for logo */
+}
+
+.loginlogo img {
+  width: 100px; /* Set initial size of the logo */
+  height: auto;
+  transition: transform 2s; /* Transition for logo */
+}
+
+.loginlogo img:hover {
+  transform: scale(2);
+  transition: transform 2s; /* Same hover transition time */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-btn {
+  background-color: #007bff;
+  transition: transform 0.3s; /* Default button color for 'Login' */
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.2);
+  transition: ease 1s;
+}
+
+.login-btn.google {
+  background-color: #4285f4;
+}
+
+.login-btn.google:hover {
+  background-color: #357ae8;
+  transform: scale(1.03);
+}
+
+.login-btn.instagram {
+  background-color: #c13584;
+}
+
+.login-btn.instagram:hover {
+  background-color: #b12a6b;
+  transform: scale(1.03);
+}
+
+.login-btn.twitter {
+  background-color: #1da1f2;
+}
+
+.login-btn.twitter:hover {
+  background-color: #1991db;
+  transform: scale(1.03);
+}
+
+.login-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: transform 1s; /* Transition for icon animation */
+}
+
+.login-btn img:hover {
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+.login-options .login-btn {
+  margin-top: 20px;
+  margin-right: 20px;
+  gap: 0px;
+}
+
+.login-options p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-options {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Reduced spacing between buttons */
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+  justify-content: center;
+}
+
+.forgot-password:hover {
+  color: #0056b3;
+}
+/* login style ending */
+/*carrito start */
+/* styles.css */
+#cart-items {
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.cart-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/* Loading Screen Start */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-logo {
+  width: 60px;
+  height: 60px;
+  animation: rotate 1s linear infinite;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 10px;
+  background-color: #ddd;
+  margin: 20px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background-color: orange;
+  animation: fill 2s linear forwards;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fill {
+  100% {
+    width: 100%;
+  }
+}
+
+/* Hide Loading Screen */
+.hidden {
+  display: none;
+}
+@keyframes rotate-stop {
+  0% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-logo {
+  width: 60px;
+  height: 60px;
+  animation: rotate-stop 1s linear infinite;
+}
+
+/* Animación de puntos de "Cargando..." */
+@keyframes dots {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+.loading-content p::after {
+  display: inline-block;
+  animation: dots 1s steps(3, end) infinite;
+}
+/* Loading Screen Ending */
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#darkModeButton {
+  background: transparent;
+  border: black;
+  color: var gray;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dark-mode .header,
+.dark-mode .footer,
+.dark-mode .section,
+nav {
+  background-color: #333;
+  color: #333;
+}
+
+.dark-mode .main-nav a {
+  color: #ffffff;
+}
+
+.dark-mode .main-nav a:hover {
+  background-color: #343a40;
+}
+
+.dark-mode .catalogue-item {
+  border-color: #333;
+}
+
+.dark-mode .loading-screen {
+  background: rgba(18, 18, 18, 0.9);
+}
+/*dark mode ending*/
