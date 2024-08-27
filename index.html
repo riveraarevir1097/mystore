@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystore</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body>
+
+  <header>
+    <header class="header">
+      <div class="menu1">
+        <div class="logo">
+          <a href="#"><img width="100px" height="100px" src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png"></a>
+          <h1>Mystore</h1>
+        </div>
+      </div>
+
+      </div>
+      <div class="menu2">
+        <nav class="navbar">
+          <ul>
+            <button id="darkModeButton" class="dark-mode-toggle">
+              <span id="darkModeIcon" class="material-symbols-outlined">contrast</span>
+            </button>
+            <li><button class="login" href="#" onclick="showSection('login')">Login</a></button>
+
+              <button class="Signin" href="#" onclick="showSection('signin')">Sign In </a></button>
+            </li>
+          </ul>
+
+      </div>
+    </header>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+      <div class="loading-content">
+        <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Loading Logo" class="loading-logo">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <p>Loading...</p>
+        <!-- Loading Screen ending-->
+      </div>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Inicio</a>
+    <a href="#" onclick="showSection('products')">Productos</a>
+    <a href="#" onclick="showSection('cart')">Carrito</a>
+    <a href="#" onclick="showSection('contact')">Contacto</a>
+
+  </nav>
+
+  <div class="containerhome">
+    <div id="home" class="section active">
+      <div class="home-section">
+        <div class="home-welcome">
+          <h1>¡Bienvenido a Nuestra Tienda!</h1>
+          <p>Encuentra los mejores productos a los mejores precios.</p>
+        </div>
+
+        <div class="home-highlights">
+          <h2>Destacados del Día</h2>
+          <div class="highlights">
+            <div class="highlight-item">
+              <h3>Oferta Especial</h3>
+              <p>Hasta un 50% de descuento en productos seleccionados.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>Nuevas Llegadas</h3>
+              <p>Descubre las últimas tendencias en moda y tecnología.</p>
+            </div>
+            <div class="highlight-item">
+              <h3>Recomendado para Ti</h3>
+              <p>Productos seleccionados especialmente para ti.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-benefits">
+          <h2>¿Por Qué Elegirnos?</h2>
+          <div class="benefits">
+            <div class="benefit-item">
+              <h3>Calidad Garantizada</h3>
+              <p>Solo productos de la más alta calidad.</p>
+            </div>
+            <div class="benefit-item">
+              <h3>Envíos Rápidos</h3>
+              <p>Recibe tus productos en tiempo récord.</p>
+            </div>
+            <div class="benefit-item">
+              <h3>Atención al Cliente</h3>
+              <p>Estamos aquí para ayudarte en cada paso del camino.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-testimonials">
+          <h2>Lo Que Dicen Nuestros Clientes</h2>
+          <p>"Mystore es la mejor tienda en línea que he usado, siempre cumplen." - <em>Roberto Cavada Telenoticias RD
+              <p>"Solo lamento no haberla conocido antes, super simple de usar y los productos llegan de una!" Omar Fernández FP <em>
+                </em></p>
+        </div>
+
+      </div>
+
+      <div class="home-cta">
+        <h2>¡Comienza a Comprar Ahora!</h2>
+        <p>Explora nuestras categorías y añade al carrito tus productos favoritos.</p>
+        <a href="#" class="btn" onclick="showSection('products')">Ir a la Tienda</a>
+           
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div id="products" class="section">
+    <h2>Nuestros Productos</h2>
+
+    <main class="main-container">
+      <section class="products-grid">
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/714leNyXHIL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Auriculares Inalámbricos Bluetooth">
+          <h3>Auriculares Inalámbricos Bluetooth</h3>
+          <p>Disfruta de la libertad sin cables con estos auriculares de alta fidelidad. Ideal para llamadas, música y ejercicio.</p>
+          <p class="price">US$9.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/61I22cL7v+L._AC_SY300_SX300_.jpg" alt="Reloj Inteligente Fitness Tracker">
+          <h3>Reloj Inteligente Fitness Tracker</h3>
+          <p>Mantente al tanto de tu salud con un reloj que monitorea tu ritmo cardíaco, pasos, calorías, y mucho más.</p>
+          <p class="price">US$19.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/51J0ndqwvhL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Cargador Portátil 10,000mAh">
+          <h3>Cargador Portátil 10,000mAh</h3>
+          <p>Nunca te quedes sin batería con este cargador portátil compacto y de alta capacidad, perfecto para viajes.</p>
+          <p class="price">US$19.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/61GJd-Jue9L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Cámara de Seguridad Wi-Fi">
+          <h3>Cámara de Seguridad Wi-Fi 4k</h3>
+          <p>Protege tu hogar con una cámara de seguridad que ofrece visión nocturna, detección de movimiento y acceso remoto.</p>
+          <p class="price">US$39.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/61-CCYeliPL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Mini Proyector Portátil HD">
+          <h3>Mini Proyector Portátil HD</h3>
+          <p>Lleva el cine a cualquier lugar con este mini proyector que ofrece una experiencia de visualización en alta definición.</p>
+          <p class="price">US$59.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/51Z4Xf3a1-L.__AC_SY445_SX342_QL70_FMwebp_.jpg" alt="Gafas de Sol Polarizadas">
+          <h3>Gafas de Sol Polarizadas</h3>
+          <p>Protege tus ojos con estas elegantes gafas de sol polarizadas, perfectas para cualquier ocasión al aire libre.</p>
+          <p class="price">US$19.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/71ZhF0kiKtL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Mochila Antirrobo con Puerto USB">
+          <h3>Mochila Antirrobo con Puerto USB</h3>
+          <p>Mantén tus pertenencias seguras con esta mochila antirrobo, equipada con un puerto USB para cargar dispositivos sobre la marcha.</p>
+          <p class="price">US$35.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/81DFx9DVDjL._AC_SX679_.jpg" alt="Humidificador de Aromaterapia Ultrasónico">
+          <h3>Humidificador de Aromaterapia Ultrasónico</h3>
+          <p>Crea un ambiente relajante en tu hogar con este humidificador que difunde aceites esenciales y mejora la calidad del aire.</p>
+          <p class="price">US$40.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/81djh1gfUwL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Altavoz Bluetooth Impermeable">
+          <h3>Altavoz Bluetooth Impermeable</h3>
+          <p>Llévate la música a la ducha o a la piscina con este altavoz Bluetooth resistente al agua y de sonido potente.</p>
+          <p class="price">US$26.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/71e62lr6KoL._AC_SX679_.jpg" alt="Humidificador de Aromaterapia Ultrasónico">
+          <h3>Consola de videojuegos portable HDMI </h3>
+          <p>Más de 20000 juegos retro integrados: está preinstalada 23 emuladores y paquete con tarjeta TF de 64 GB y dos controles similares a los de PS5.</p>
+          <p>No es necesario descargar e instalar por nada por ti mismo, no requiere Internet, puedes jugar más de 20000 juegos clásicos simplemente conectándote al televisor!! </p>
+          <p class="price">US$45.99</p>
+          <button class="btn-add-to-cart">Agregar al carrito</button>
+        </div>
+      </section>
+      <div id="product-list"></div>
+
+  </div>
+  <div id="cart" class="section">
+
+    <h2>Tu Carrito</h2>
+    <div id="cart-items"></div>
+    <button onclick="checkout()">Proceder al Pago</button>
+  </div>
+  <div id="contact" class="section">
+    <h2>Contacto</h2>
+    <p>Alguna duda?? Ponte en contacto con nosotros a través de este formulario y nuestro equipo estará contactandote lo más pronto posible!!</p>
+    <main>
+      <form>
+        <label for="nombreapellido">Nombre y Apellido</label>
+        <input type="text" id="nombreapellido" class="input-padron" required>
+
+        <label for="correoelectronico">Correo Electrónico</label>
+        <input type="email" id="correoelectronico" class="input-padron" required placeholder="fulano@email.com">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" class="input-padron" required placeholder="(829)-XXX-XXXX">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+        <fieldset>
+          <legend>¿Cómo le gustaría que lo contactemos?</legend>
+
+          <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+
+          <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+
+          <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>¿En cuál horario prefiere ser contactado?</legend>
+          <select>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+          </select>
+        </fieldset>
+
+        <label class="checkbox"><input type="checkbox" checked>Pincha la casilla si Le gustaría recibir novedades sobre nuevas ofertas de MYSTORE en su correo y enterese de todas las ofertas y novedades en nuestro catálogo</label>
+
+        <input type="submit" value="Enviar formulario" class="enviar">
+
+      </form>
+
+      <!-- <table> 
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08h ~ 20h</td>
+                     </tr>  -->
+      </tbody>
+      </table>
+    </main>
+
+  </div>
+  <div id="about" class="section">
+
+    <body>
+      <section class="about-us-section">
+        <div class="contentabout">
+          <title>Sobre Nosotros - Mystore</title>
+          <link rel="stylesheet" href="styles.css">
+          </head>
+
+          <body>
+            <div class="about-us-section">
+              <div class="scroll-container">
+                <div class="content-about">
+                  <div class="mystore-text-box">
+                    <img src="https://www.ceupe.com/images/easyblog_articles/1927/b2ap3_amp_calidad-servicio-1.jpg" alt="Bienvenida">
+                    <h1>Somos Calidad</h1>
+                    <p>Descubre una experiencia de compra sin igual con nuestra amplia variedad de productos seleccionados con el mayor cuidado. Cada producto está meticulosamente elegido para ofrecerte la mejor calidad y valor.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://www.incotec.es/app/uploads/2023/12/que-es-innovacion-sostenible-e1702285476769.jpg" alt="Productos">
+                    <h1>Somos Modernos</h1>
+                    <p>Desde tecnología innovadora hasta accesorios de moda, nuestra tienda cubre todas las áreas de tu vida. Ofrecemos los últimos modelos de dispositivos electrónicos, moda de tendencia y mucho más.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://schmitman.com/wp-content/uploads/2015/07/ser-un-buen-lider.jpg" alt="Servicio al Cliente">
+                    <h1>Somos Guías</h1>
+                    <p>Nos enorgullece ofrecer un servicio personalizado, asegurando que cada compra sea sencilla y agradable. Nuestro equipo de soporte está disponible para ayudarte con cualquier consulta o problema.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Comunidades">
+                    <h1>Somos Comunidad</h1>
+                    <p>Valoramos la confianza de nuestros clientes y trabajamos para ofrecer precios competitivos y promociones exclusivas. Únete a nuestra comunidad y disfruta de beneficios únicos.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://www.acprevencion.com/wp-content/uploads/2018/06/creatividad-e-innovacion-empresarial.jpg" alt="Innovación">
+                    <h1> Somos Innovación</h1>
+                    <p>Estamos a la vanguardia de las últimas tendencias tecnológicas y de mercado. Nuestro objetivo es ofrecer productos innovadores que mejoren tu vida diaria y te mantengan al día con lo último en tecnología.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Compromiso">
+                    <h1>Somos Compromiso</h1>
+                    <p>Nos comprometemos a proporcionar una experiencia de compra excepcional y a cumplir con nuestros estándares de calidad. Estamos aquí para asegurarnos de que cada cliente esté completamente satisfecho con sus compras.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://images.unsplash.com/photo-1520033222127-8f6d08b425f6?q=80&w=1381&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Variedad">
+                    <h1>Somos Variedad</h1>
+                    <p>Desde gadgets electrónicos hasta ropa de moda, ofrecemos una vasta gama de productos para satisfacer todas tus necesidades. ¡Siempre hay algo nuevo y emocionante en nuestra tienda!</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/29/09/29/womens-5352086_1280.png" alt="Tendencias">
+                    <h1>Somos Tendencias</h1>
+                    <p>Estamos comprometidos a ofrecer lo último en tendencias del mercado. Mantente a la moda y aprovecha nuestras ofertas exclusivas en productos de última generación.</p>
+                  </div>
+                  <div class="mystore-text-box">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/01/18/06/satisfaction-guarantee-2109235_1280.png" alt="Compromiso">
+                    <h1>Somos Veracidad</h1>
+                    <p>Puedes verificar por tí mismo en internet si alguien puede competir con nuestros precios, si es así te reembolsamos el excedente en cupones para tu siguiente compra.</p>
+                  </div>
+
+                </div>
+                <script src="script.js"></script>
+      </section>
+
+</html>
+</div>
+</div>
+<div id="login" class="section">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <body>
+    <div class="login-container">
+      <div class="background-image-login"></div>
+      <div class="login-box">
+        <div class="loginlogo">
+          <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Logo">
+        </div>
+        <h2>Login</h2>
+        <form class="login-form">
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="login-options">
+          <a href="#" class="forgot-password">Forgot Password?</a>
+          <div class="divider"><span>or</span></div>
+          <button class="login-btn google"><img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google">Login with Google</button>
+          <button class="login-btn instagram"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">Login with Instagram</button>
+          <button class="login-btn twitter"><img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter X">Login with Twitter</button>
+        </div>
+      </div>
+    </div>
+    <div id="signin" class="section">
+      <title>SingIn Page</title>
+
+      <p> hola
+
+  </body>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <a href="#">
+        <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Mystore Logo" width="100" height="100">
+      </a>
+    </div>
+
+    <div class="footer-links">
+
+      <ul>
+        <navaboutus>
+          <li><a href="#" onclick="showSection('about')">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </navaboutus>
+        </nav>
+    </div>
+
+    <div class="footer-subscribe">
+      <p>Únete a nuestra comunidad y recibe un 10% de descuento en tu primera compra</p>
+      <p>+ 5% extra mensual solo por afiliar tu tarjeta de crédito totalmente GRATIS!</p>
+      <form action="#" method="POST">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/?size=100&id=13912&format=png&color=000000" alt="Facebook" width="30" height="30">
+      </a>
+      <a href="https://www.twitter.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter" width="30" height="30">
+      </a>
+      <a href="https://www.youtube.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube" width="30" height="30">
+      </a>
+      <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" width="30" height="30">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Mystore. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
