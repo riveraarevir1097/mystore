@@ -1,437 +1,1081 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-6ada635c-34b7-44c0-9967-db6d0620ce5f" data-elfsight-app-lazy></div>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mystore</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Loading Logo" class="loading-logo">
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <p>Cargando...</p>
+    </div>
+  </div>
 
   <header>
-    <header class="header">
+    <div class="header">
       <div class="menu1">
         <div class="logo">
           <a href="#"><img width="100px" height="100px" src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png"></a>
           <h1>Mystore</h1>
         </div>
       </div>
-
-      </div>
       <div class="menu2">
-        <nav class="navbar">
+        <nav class="navbar2">
           <ul>
-            <button id="darkModeButton" class="dark-mode-toggle">
-              <span id="darkModeIcon" class="material-symbols-outlined">contrast</span>
-            </button>
-            <li><button class="login" href="#" onclick="showSection('login')">Login</a></button>
-
-              <button class="Signin" href="#" onclick="showSection('signin')">Sign In </a></button>
-            </li>
+            <li><button class="login" onclick="showSection('login')">Login</button></li>
+            <li><button class="signin" onclick="showSection('signin')">Sign In</button></li>
           </ul>
-
+        </nav>
       </div>
-    </header>
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-      <div class="loading-content">
-        <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Loading Logo" class="loading-logo">
-        <div class="progress-bar">
-          <div class="progress-fill"></div>
-        </div>
-        <p>Loading...</p>
-        <!-- Loading Screen ending-->
-      </div>
-  </header>
+      <button id="darkModeButton" class="dark-mode-toggle">
+        <span id="darkModeIcon" class="material-symbols-outlined">dark_mode</span>
+      </button>
 
-  <nav>
-    <a href="#" onclick="showSection('home')">Inicio</a>
-    <a href="#" onclick="showSection('products')">Productos</a>
-    <a href="#" onclick="showSection('cart')">Carrito</a>
-    <a href="#" onclick="showSection('contact')">Contacto</a>
+      <nav class="main-nav">
+        <a href="#" onclick="showSection('home')">Inicio</a>
+        <a href="#" onclick="showSection('products')">Productos</a>
+        <a href="#" onclick="showSection('cart')">Carrito</a>
+        <a href="#" onclick="showSection('contact')">Contacto</a>
+        <!-- <a href="#" onclick="showSection('about')"></a>
+    <a href="#" onclick="showSection('privacy')"></a>
+    <a href="#" onclick="showSection('terms')"></a>-->
+      </nav>
 
-  </nav>
+      <div class="containerhome">
+        <section class="home-section">
+          <div class="parallax"></div>
+          <div class="home-welcome">
+            <h1>Bienvenido a Mystore</h1>
+            <p>¡Tu tienda en línea de artículos variados en República Dominicana! Encuentra desde electrónicos hasta artículos para el hogar, todo en un solo lugar.</p>
+          </div>
+          <div class="home-video">
 
-  <div class="containerhome">
-    <div id="home" class="section active">
-      <div class="home-section">
-        <div class="home-welcome">
-          <h1>¡Bienvenido a Nuestra Tienda!</h1>
-          <p>Encuentra los mejores productos a los mejores precios.</p>
-        </div>
+            <iframe width="860" height="515" src="https://www.youtube.com/embed/8Z-oOzYwKpk?si=JsxavlBeMiIPotAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <div class="home-highlights">
-          <h2>Destacados del Día</h2>
+            </video>
+          </div>
+        </section>
+
+        <section class="home-highlights">
+          <h2>Productos Destacados</h2>
           <div class="highlights">
             <div class="highlight-item">
-              <h3>Oferta Especial</h3>
-              <p>Hasta un 50% de descuento en productos seleccionados.</p>
+              <h3>Electrodomésticos</h3>
+              <p>Encuentra los mejores electrodomésticos para tu hogar, desde neveras hasta lavadoras.</p>
             </div>
             <div class="highlight-item">
-              <h3>Nuevas Llegadas</h3>
-              <p>Descubre las últimas tendencias en moda y tecnología.</p>
+              <h3>Moda y Accesorios</h3>
+              <p>Explora nuestra colección de moda y accesorios para todos los gustos y edades.</p>
             </div>
             <div class="highlight-item">
-              <h3>Recomendado para Ti</h3>
-              <p>Productos seleccionados especialmente para ti.</p>
+              <h3>Artículos para el Hogar</h3>
+              <p>Todo lo que necesitas para hacer de tu hogar un lugar cómodo y acogedor.</p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="home-benefits">
-          <h2>¿Por Qué Elegirnos?</h2>
+        <section class="home-benefits">
+          <h2>Beneficios de Comprar en Mystore</h2>
           <div class="benefits">
             <div class="benefit-item">
-              <h3>Calidad Garantizada</h3>
-              <p>Solo productos de la más alta calidad.</p>
+              <h3>Envío Rápido</h3>
+              <p>Recibe tus productos en la puerta de tu casa en tiempo récord con nuestro servicio de envío rápido.</p>
             </div>
             <div class="benefit-item">
-              <h3>Envíos Rápidos</h3>
-              <p>Recibe tus productos en tiempo récord.</p>
+              <h3>Ofertas Exclusivas</h3>
+              <p>Disfruta de ofertas especiales y descuentos exclusivos solo para nuestros clientes.</p>
             </div>
             <div class="benefit-item">
-              <h3>Atención al Cliente</h3>
-              <p>Estamos aquí para ayudarte en cada paso del camino.</p>
+              <h3>Servicio al Cliente</h3>
+              <p>Estamos aquí para ayudarte. Nuestro equipo de atención al cliente está disponible para resolver tus dudas.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-product-carousel">
+          <h2>Tendencias</h2>
+          <div class="product-carousel">
+            <div class="product">
+              <img src="https://img.freepik.com/foto-gratis/coleccion-tecnologia-hombre-moderno-escritorio-madera-auriculares-gafas-sol-telefono-inteligente-generado-ai_24640-92923.jpg" alt="Electrodoméstico Moderno">
+              <div class="product-name">Tecnología</div>
+            </div>
+            <div class="product">
+              <img src="https://p4.wallpaperbetter.com/wallpaper/698/904/21/workout-motivation-gym-girl-wallpaper-preview.jpg" alt="Ropa deportiva">
+              <div class="product-name">Sección fitness</div>
+            </div>
+            <div class="product">
+              <img src="https://images.unsplash.com/photo-1601957433250-5d2542fa02a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDY5NzN8MHwxfGFsbHwxfHx8fHx8fHx8MTY4MjkzNTUyOQ&ixlib=rb-1.2.1&q=80&w=1600" alt="Accesorios para el Hogar">
+              <div class="product-name">Accesorios para el Hogar</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-brand-carousel">
+          <h2>Marcas Destacadas</h2>
+          <div class="brand-carousel">
+            <div class="brand">
+              <img src="https://i.pinimg.com/originals/2c/07/64/2c0764ea42cc8dcbc37e727c14a2b1b0.jpg" alt="microsoft">
+              <div class="brand-name"></div>
+            </div>
+            <div class="brand">
+              <img src="https://devimages-cdn.apple.com/wwdc-services/articles/images/4E5C0028-D1D4-4586-A736-23182F2E62C7/2048.jpeg" alt="Apple">
+              <div class="brand-name"></div>
+            </div>
+            <div class="brand">
+              <img src="https://ams3.digitaloceanspaces.com/graffica/2022/12/Three-Bars-adidas-logo-1.jpg-1024x570.webp" alt="Adidas">
+              <div class="brand-name">Marca de Artículos para el Hogar</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-testimonials">
+          <h2>Testimonios de Nuestros Clientes</h2>
+          <p>"¡Me encanta Mystore! Encuentro todo lo que necesito a precios increíbles. El envío es rápido y el servicio al cliente es excelente." - Ana María Bocel - Grupo Bocel</p>
+          <p>"Siempre encuentro ofertas y productos de calidad. Recomiendo Mystore a todos mis amigos y familiares." - Juan Alejandro - Listín Diario</p>
+          <p>"La verdad no e por na¨ Pero hacía falta una página así" - Santiago Matías - Alofoke Radio</p>
+        </section>
+
+        <section class="home-cta">
+          <h2>¡No Te Lo Pierdas!</h2>
+          <p>Descubre nuestras ofertas especiales y productos exclusivos. ¡Compra ahora y aprovecha nuestras promociones!</p>
+          <a href="#shop" class="btn">Comprar Ahora</a>
+        </section>
+
+        <section class="social-feed">
+          <h2>Últimas Noticias</h2>
+          <div class="feed-item">
+            <img width="300px" src="https://electroomega.com.do/wp-content/uploads/2024/02/electrodomesticos-combinando-funcionalidad-y-diseno-moderno.png" alt="electrodomesticos">
+            <p>¡Nuevo en Mystore! Llega nuestra nueva línea de electrodomésticos. ¡Visítanos y sé el primero en conocerlos!</p>
+          </div>
+          <div class="feed-item">
+            <img width="300px" src="https://i.etsystatic.com/39713332/r/il/f1c9f8/4459435560/il_570xN.4459435560_sas8.jpg" alt="Celulares">
+            <p>Gran oferta de celulares. ¡No te la pierdas! Solo por tiempo limitado.</p>
+          </div>
+        </section>
+
+        <div class="chat-widget">
+          <img src="https://img.icons8.com/?size=100&id=Xtd6MUL8UCpP&format=png&color=000000" alt="RD">
+        </div>
+      </div>
+
+      <!-- Login Section -->
+      <div id="login" class="section">
+        <div class="login-container">
+          <div class="login-box">
+            <h2>Login</h2>
+            <form class="login-form">
+              <input type="text" placeholder="Username" required>
+              <input type="password" placeholder="Password" required>
+              <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="login-options">
+              <a href="#" class="forgot-password">Forgot Password?</a>
+              <div class="divider"><span>or</span></div>
+              <button class="login-btn google"><img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google">Login with
+                Google</button>
+              <button class="login-btn instagram"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">Login with
+                Instagram</button>
+              <button class="login-btn twitter"><img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter X">Login with
+                Twitter</button>
             </div>
           </div>
         </div>
-
-        <div class="home-testimonials">
-          <h2>Lo Que Dicen Nuestros Clientes</h2>
-          <p>"Mystore es la mejor tienda en línea que he usado, siempre cumplen." - <em>Roberto Cavada Telenoticias RD
-              <p>"Solo lamento no haberla conocido antes, super simple de usar y los productos llegan de una!" Omar Fernández FP <em>
-                </em></p>
-        </div>
-
       </div>
 
-      <div class="home-cta">
-        <h2>¡Comienza a Comprar Ahora!</h2>
-        <p>Explora nuestras categorías y añade al carrito tus productos favoritos.</p>
-        <a href="#" class="btn" onclick="showSection('products')">Ir a la Tienda</a>
-           
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <div id="products" class="section">
-    <h2>Nuestros Productos</h2>
-
-    <main class="main-container">
-      <section class="products-grid">
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/714leNyXHIL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Auriculares Inalámbricos Bluetooth">
-          <h3>Auriculares Inalámbricos Bluetooth</h3>
-          <p>Disfruta de la libertad sin cables con estos auriculares de alta fidelidad. Ideal para llamadas, música y ejercicio.</p>
-          <p class="price">US$9.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/61I22cL7v+L._AC_SY300_SX300_.jpg" alt="Reloj Inteligente Fitness Tracker">
-          <h3>Reloj Inteligente Fitness Tracker</h3>
-          <p>Mantente al tanto de tu salud con un reloj que monitorea tu ritmo cardíaco, pasos, calorías, y mucho más.</p>
-          <p class="price">US$19.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/51J0ndqwvhL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Cargador Portátil 10,000mAh">
-          <h3>Cargador Portátil 10,000mAh</h3>
-          <p>Nunca te quedes sin batería con este cargador portátil compacto y de alta capacidad, perfecto para viajes.</p>
-          <p class="price">US$19.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/61GJd-Jue9L.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Cámara de Seguridad Wi-Fi">
-          <h3>Cámara de Seguridad Wi-Fi 4k</h3>
-          <p>Protege tu hogar con una cámara de seguridad que ofrece visión nocturna, detección de movimiento y acceso remoto.</p>
-          <p class="price">US$39.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/61-CCYeliPL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Mini Proyector Portátil HD">
-          <h3>Mini Proyector Portátil HD</h3>
-          <p>Lleva el cine a cualquier lugar con este mini proyector que ofrece una experiencia de visualización en alta definición.</p>
-          <p class="price">US$59.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/51Z4Xf3a1-L.__AC_SY445_SX342_QL70_FMwebp_.jpg" alt="Gafas de Sol Polarizadas">
-          <h3>Gafas de Sol Polarizadas</h3>
-          <p>Protege tus ojos con estas elegantes gafas de sol polarizadas, perfectas para cualquier ocasión al aire libre.</p>
-          <p class="price">US$19.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/71ZhF0kiKtL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Mochila Antirrobo con Puerto USB">
-          <h3>Mochila Antirrobo con Puerto USB</h3>
-          <p>Mantén tus pertenencias seguras con esta mochila antirrobo, equipada con un puerto USB para cargar dispositivos sobre la marcha.</p>
-          <p class="price">US$35.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/81DFx9DVDjL._AC_SX679_.jpg" alt="Humidificador de Aromaterapia Ultrasónico">
-          <h3>Humidificador de Aromaterapia Ultrasónico</h3>
-          <p>Crea un ambiente relajante en tu hogar con este humidificador que difunde aceites esenciales y mejora la calidad del aire.</p>
-          <p class="price">US$40.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/81djh1gfUwL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Altavoz Bluetooth Impermeable">
-          <h3>Altavoz Bluetooth Impermeable</h3>
-          <p>Llévate la música a la ducha o a la piscina con este altavoz Bluetooth resistente al agua y de sonido potente.</p>
-          <p class="price">US$26.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="product-card">
-          <img src="https://m.media-amazon.com/images/I/71e62lr6KoL._AC_SX679_.jpg" alt="Humidificador de Aromaterapia Ultrasónico">
-          <h3>Consola de videojuegos portable HDMI </h3>
-          <p>Más de 20000 juegos retro integrados: está preinstalada 23 emuladores y paquete con tarjeta TF de 64 GB y dos controles similares a los de PS5.</p>
-          <p>No es necesario descargar e instalar por nada por ti mismo, no requiere Internet, puedes jugar más de 20000 juegos clásicos simplemente conectándote al televisor!! </p>
-          <p class="price">US$45.99</p>
-          <button class="btn-add-to-cart">Agregar al carrito</button>
-        </div>
-      </section>
-      <div id="product-list"></div>
-
-  </div>
-  <div id="cart" class="section">
-
-    <h2>Tu Carrito</h2>
-    <div id="cart-items"></div>
-    <button onclick="checkout()">Proceder al Pago</button>
-  </div>
-  <div id="contact" class="section">
-    <h2>Contacto</h2>
-    <p>Alguna duda?? Ponte en contacto con nosotros a través de este formulario y nuestro equipo estará contactandote lo más pronto posible!!</p>
-    <main>
-      <form>
-        <label for="nombreapellido">Nombre y Apellido</label>
-        <input type="text" id="nombreapellido" class="input-padron" required>
-
-        <label for="correoelectronico">Correo Electrónico</label>
-        <input type="email" id="correoelectronico" class="input-padron" required placeholder="fulano@email.com">
-
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" class="input-padron" required placeholder="(829)-XXX-XXXX">
-
-        <label for="mensaje">Mensaje</label>
-        <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
-
-        <fieldset>
-          <legend>¿Cómo le gustaría que lo contactemos?</legend>
-
-          <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
-
-          <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
-
-          <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
-
-        </fieldset>
-
-        <fieldset>
-          <legend>¿En cuál horario prefiere ser contactado?</legend>
-          <select>
-            <option>Mañana</option>
-            <option>Tarde</option>
-            <option>Noche</option>
-          </select>
-        </fieldset>
-
-        <label class="checkbox"><input type="checkbox" checked>Pincha la casilla si Le gustaría recibir novedades sobre nuevas ofertas de MYSTORE en su correo y enterese de todas las ofertas y novedades en nuestro catálogo</label>
-
-        <input type="submit" value="Enviar formulario" class="enviar">
-
-      </form>
-
-      <!-- <table> 
-                <thead>
-                    <tr>
-                        <th>Día</th>
-                        <th>Horario</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lunes</td>
-                        <td>08h ~ 20h</td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>08h ~ 20h</td>
-                    </tr>
-                    <tr>
-                        <td>Viernes</td>
-                        <td>08h ~ 20h</td>
-                     </tr>  -->
-      </tbody>
-      </table>
-    </main>
-
-  </div>
-  <div id="about" class="section">
-
-    <body>
-      <section class="about-us-section">
-        <div class="contentabout">
-          <title>Sobre Nosotros - Mystore</title>
-          <link rel="stylesheet" href="styles.css">
-          </head>
-
-          <body>
-            <div class="about-us-section">
-              <div class="scroll-container">
-                <div class="content-about">
-                  <div class="mystore-text-box">
-                    <img src="https://www.ceupe.com/images/easyblog_articles/1927/b2ap3_amp_calidad-servicio-1.jpg" alt="Bienvenida">
-                    <h1>Somos Calidad</h1>
-                    <p>Descubre una experiencia de compra sin igual con nuestra amplia variedad de productos seleccionados con el mayor cuidado. Cada producto está meticulosamente elegido para ofrecerte la mejor calidad y valor.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://www.incotec.es/app/uploads/2023/12/que-es-innovacion-sostenible-e1702285476769.jpg" alt="Productos">
-                    <h1>Somos Modernos</h1>
-                    <p>Desde tecnología innovadora hasta accesorios de moda, nuestra tienda cubre todas las áreas de tu vida. Ofrecemos los últimos modelos de dispositivos electrónicos, moda de tendencia y mucho más.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://schmitman.com/wp-content/uploads/2015/07/ser-un-buen-lider.jpg" alt="Servicio al Cliente">
-                    <h1>Somos Guías</h1>
-                    <p>Nos enorgullece ofrecer un servicio personalizado, asegurando que cada compra sea sencilla y agradable. Nuestro equipo de soporte está disponible para ayudarte con cualquier consulta o problema.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Comunidades">
-                    <h1>Somos Comunidad</h1>
-                    <p>Valoramos la confianza de nuestros clientes y trabajamos para ofrecer precios competitivos y promociones exclusivas. Únete a nuestra comunidad y disfruta de beneficios únicos.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://www.acprevencion.com/wp-content/uploads/2018/06/creatividad-e-innovacion-empresarial.jpg" alt="Innovación">
-                    <h1> Somos Innovación</h1>
-                    <p>Estamos a la vanguardia de las últimas tendencias tecnológicas y de mercado. Nuestro objetivo es ofrecer productos innovadores que mejoren tu vida diaria y te mantengan al día con lo último en tecnología.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Compromiso">
-                    <h1>Somos Compromiso</h1>
-                    <p>Nos comprometemos a proporcionar una experiencia de compra excepcional y a cumplir con nuestros estándares de calidad. Estamos aquí para asegurarnos de que cada cliente esté completamente satisfecho con sus compras.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://images.unsplash.com/photo-1520033222127-8f6d08b425f6?q=80&w=1381&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Variedad">
-                    <h1>Somos Variedad</h1>
-                    <p>Desde gadgets electrónicos hasta ropa de moda, ofrecemos una vasta gama de productos para satisfacer todas tus necesidades. ¡Siempre hay algo nuevo y emocionante en nuestra tienda!</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://cdn.pixabay.com/photo/2020/06/29/09/29/womens-5352086_1280.png" alt="Tendencias">
-                    <h1>Somos Tendencias</h1>
-                    <p>Estamos comprometidos a ofrecer lo último en tendencias del mercado. Mantente a la moda y aprovecha nuestras ofertas exclusivas en productos de última generación.</p>
-                  </div>
-                  <div class="mystore-text-box">
-                    <img src="https://cdn.pixabay.com/photo/2017/03/01/18/06/satisfaction-guarantee-2109235_1280.png" alt="Compromiso">
-                    <h1>Somos Veracidad</h1>
-                    <p>Puedes verificar por tí mismo en internet si alguien puede competir con nuestros precios, si es así te reembolsamos el excedente en cupones para tu siguiente compra.</p>
-                  </div>
-
+      <!-- SignIn Section -->
+      <div id="signin" class="section">
+        <div class="signup-container">
+          <div class="signin-box">
+            <h1>Crea tu cuenta</h1>
+            <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Background" class="background-image-signup">
+            <div class="signup-box">
+              <div class="signuplogo">
+                <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Mystore Logo" width="100" height="100">
+                <h2>Create an Account</h2>
+                <form class="signup-form">
+                  <input type="text" placeholder="Full Name" required>
+                  <input type="email" placeholder="Email" required>
+                  <input type="password" placeholder="Password" required>
+                  <button type="submit" class="signup-btn">Sign Up</button>
+                  <a href="#" class="forgot-password">Forgot Password?</a>
+                </form>
+                <div class="signup-options">
+                  <p>Or</p>
+                  <button class="signup-btn google">
+                    <img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google">Sign up
+                    with Google
+                  </button>
+                  <button class="signup-btn twitter">
+                    <img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter">Sign up
+                    with Twitter
+                  </button>
+                  <button class="signup-btn instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/512px-Instagram_icon.png" alt="Instagram">Sign up with Instagram
+                  </button>
                 </div>
-                <script src="script.js"></script>
-      </section>
-
-</html>
-</div>
-</div>
-<div id="login" class="section">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="styles.css">
-
-  <body>
-    <div class="login-container">
-      <div class="background-image-login"></div>
-      <div class="login-box">
-        <div class="loginlogo">
-          <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Logo">
-        </div>
-        <h2>Login</h2>
-        <form class="login-form">
-          <input type="text" placeholder="Username" required>
-          <input type="password" placeholder="Password" required>
-          <button type="submit" class="login-btn">Login</button>
-        </form>
-        <div class="login-options">
-          <a href="#" class="forgot-password">Forgot Password?</a>
-          <div class="divider"><span>or</span></div>
-          <button class="login-btn google"><img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google">Login with Google</button>
-          <button class="login-btn instagram"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">Login with Instagram</button>
-          <button class="login-btn twitter"><img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter X">Login with Twitter</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- About Us Section -->
+      <div id="about" class="section">
+        <div class="content-about">
+          <h2>Acerca de nosotros</h2>
+          <div class="mystore-text-box">
+            <img src="https://www.ceupe.com/images/easyblog_articles/1927/b2ap3_amp_calidad-servicio-1.jpg" alt="Bienvenida">
+            <h1>Somos Calidad</h1>
+            <p>Descubre una experiencia de compra sin igual con nuestra amplia variedad de productos seleccionados con el mayor cuidado. Cada producto está meticulosamente elegido para ofrecerte la mejor calidad y valor.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://www.incotec.es/app/uploads/2023/12/que-es-innovacion-sostenible-e1702285476769.jpg" alt="Productos">
+            <h1>Somos Modernos</h1>
+            <p>Desde tecnología innovadora hasta accesorios de moda, nuestra tienda cubre todas las áreas de tu vida. Ofrecemos los últimos modelos de dispositivos electrónicos, moda de tendencia y mucho más.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://schmitman.com/wp-content/uploads/2015/07/ser-un-buen-lider.jpg" alt="Servicio al Cliente">
+            <h1>Somos Guías</h1>
+            <p>Nos enorgullece ofrecer un servicio personalizado, asegurando que cada compra sea sencilla y agradable. Nuestro equipo de soporte está disponible para ayudarte con cualquier consulta o problema.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Comunidades">
+            <h1>Somos Comunidad</h1>
+            <p>Valoramos la confianza de nuestros clientes y trabajamos para ofrecer precios competitivos y promociones exclusivas. Únete a nuestra comunidad y disfruta de beneficios únicos.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://www.acprevencion.com/wp-content/uploads/2018/06/creatividad-e-innovacion-empresarial.jpg" alt="Innovación">
+            <h1>Somos Innovación</h1>
+            <p>Estamos a la vanguardia de las últimas tendencias tecnológicas y de mercado. Nuestro objetivo es ofrecer productos innovadores que mejoren tu vida diaria y te mantengan al día con lo último en tecnología.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Compromiso">
+            <h1>Somos Compromiso</h1>
+            <p>Nos comprometemos a proporcionar una experiencia de compra excepcional y a cumplir con nuestros estándares de calidad. Estamos aquí para asegurarnos de que cada cliente esté completamente satisfecho con sus compras.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://images.unsplash.com/photo-1520033222127-8f6d08b425f6?q=80&w=1381&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Variedad">
+            <h1>Somos Variedad</h1>
+            <p>Desde gadgets electrónicos hasta ropa de moda, ofrecemos una vasta gama de productos para satisfacer todas tus necesidades. ¡Siempre hay algo nuevo y emocionante en nuestra tienda!</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://cdn.pixabay.com/photo/2020/06/29/09/29/womens-5352086_1280.png" alt="Tendencias">
+            <h1>Somos Tendencias</h1>
+            <p>Estamos comprometidos a ofrecer lo último en tendencias del mercado. Mantente a la moda y aprovecha nuestras ofertas exclusivas en productos de última generación.</p>
+          </div>
+          <div class="mystore-text-box">
+            <img src="https://cdn.pixabay.com/photo/2017/03/01/18/06/satisfaction-guarantee-2109235_1280.png" alt="Compromiso">
+            <h1>Somos Veracidad</h1>
+            <p>Puedes verificar por ti mismo en internet si alguien puede competir con nuestros precios, si es así te reembolsamos el excedente en cupones para tu siguiente compra.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy Policy Section -->
+      <div id="privacy" class="section">
+        <!-- Políticas de la Empresa -->
+        <h2>Nuestras políticas</h2>
+        <a href="#"><img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="policies-logo" width="100" height="100"></a>
+
+        <!-- Política de Privacidad -->
+        <div class="policy-item">
+          <img src="https://www.redeszone.net/app/uploads-redeszone.net/2021/11/diferencias-seguridad-privacidad-1200x675.jpg" alt="Privacidad" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Privacidad</h2>
+            <p>Tu privacidad es nuestra prioridad. Nos comprometemos a proteger la información personal de nuestros clientes y
+              a utilizarla solo para mejorar su experiencia de compra. Nunca compartimos tus datos con terceros sin tu
+              consentimiento expreso.</p>
+            <p>Mantenemos medidas de seguridad robustas para garantizar que tus datos estén siempre protegidos y utilizamos
+              tecnologías de encriptación para salvaguardar la información durante las transacciones.</p>
+          </div>
+        </div>
+
+        <!-- Política de Devoluciones -->
+        <div class="policy-item">
+          <img src="https://www.oleoshop.com/imagenes/poridentidad?identidad=d36748c4-1c9c-4201-8b97-6faa573b4162&ancho=850&alto=" alt="Devoluciones" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Devoluciones</h2>
+            <p>Ofrecemos una garantía de devolución de dinero de 30 días en todos nuestros productos. Si no estás satisfecho
+              con tu compra, puedes devolverla dentro de este período para un reembolso completo o un cambio.</p>
+            <p>Para procesar una devolución, el producto debe estar en su estado original, sin usar y en su embalaje
+              original. Los costos de envío para la devolución correrán por nuestra cuenta.</p>
+          </div>
+        </div>
+
+        <!-- Política de Envíos -->
+        <div class="policy-item">
+          <img src="https://img.freepik.com/vector-gratis/entrega-servicios-envio-linea-seguimiento-pedidos-linea-entrega-hogar-oficina-mensajeria-camion-scooter-bicicleta-envio-paquetes-pines-ubicacion-telefono-movil-repartidor_1150-58774.jpg" alt="Envíos" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Envíos</h2>
+            <p>Realizamos envíos a todo el mundo con tiempos de entrega que varían entre 3 y 10 días hábiles, dependiendo de
+              tu ubicación. Todos nuestros envíos están asegurados y cuentan con seguimiento en línea.</p>
+            <p>Ofrecemos envíos gratuitos en pedidos superiores a $50. Para pedidos internacionales, es posible que se apliquen
+              tarifas adicionales de aduana o impuestos, según las políticas del país de destino.</p>
+          </div>
+        </div>
+
+        <!-- Política de Atención al Cliente -->
+        <div class="policy-item">
+          <img src="https://www.marketingdirecto.com/wp-content/uploads/2021/09/atencion-al-cliente.png" alt="Atención al Cliente" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Atención al Cliente</h2>
+            <p>Nos enorgullece ofrecer un servicio al cliente excepcional. Nuestro equipo está disponible 24/7 para responder
+              cualquier pregunta o inquietud que puedas tener. Tu satisfacción es nuestra prioridad.</p>
+            <p>Ofrecemos soporte a través de múltiples canales, incluyendo chat en vivo, correo electrónico y teléfono.
+              También contamos con un centro de ayuda en línea con respuestas a las preguntas más frecuentes.</p>
+          </div>
+        </div>
+
+        <!-- Política de Garantía -->
+        <div class="policy-item">
+          <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/15360482-documento-de-garantias-de-protecao-de-seguro-de-dinheiro-cuidados-de-riqueza-de-deposito-bancario-investimento-em-dinheiro-seguro-politica-de-garantia-de-seguranca-de-moeda-conceito-de-confianca-de-poupanca-de-cobertura-bancaria-contrato-financeiro-vetor.jpg" alt="Garantía" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Garantía</h2>
+            <p>Todos nuestros productos vienen con una garantía mínima de 1 año que cubre defectos de fabricación. Si un
+              producto presenta fallas dentro de este período, lo repararemos o reemplazaremos sin costo alguno para ti.</p>
+            <p>Nuestra garantía no cubre daños causados por mal uso o accidentes. Te recomendamos leer las instrucciones de uso
+              cuidadosamente para asegurar el correcto manejo de los productos.</p>
+          </div>
+        </div>
+
+        <!-- Política de Sostenibilidad -->
+        <div class="policy-item">
+          <img src="https://www.sostenibilidad.com/media/816156/desarrollo-sostenible.jpg" alt="Sostenibilidad" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Sostenibilidad</h2>
+            <p>Estamos comprometidos con la sostenibilidad y trabajamos constantemente para reducir nuestro impacto ambiental.
+              Nuestros productos son seleccionados teniendo en cuenta su durabilidad y el uso de materiales reciclados o
+              biodegradables.</p>
+            <p>Fomentamos prácticas de consumo responsable y reciclaje. Además, nuestras operaciones buscan minimizar el uso
+              de recursos naturales mediante la implementación de tecnologías verdes y energías renovables.</p>
+          </div>
+        </div>
+
+        <!-- Política de Seguridad en las Transacciones -->
+        <div class="policy-item">
+          <img src="https://img.freepik.com/vector-premium/tienda-linea-seguridad-bancaria-compras-seguras-linea-ilustrador-vectores_101179-1529.jpg?w=360" alt="Seguridad en Transacciones" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Seguridad en las Transacciones</h2>
+            <p>La seguridad de tus transacciones es crucial para nosotros. Utilizamos métodos de pago seguros y tecnologías de
+              encriptación avanzadas para garantizar que toda la información financiera esté protegida durante tus compras.</p>
+            <p>Además, ofrecemos autenticación de dos factores como medida adicional para proteger tu cuenta y tus datos.
+              También monitoreamos constantemente nuestras plataformas para detectar y prevenir cualquier actividad
+              sospechosa.</p>
+          </div>
+        </div>
+
+        <!-- Política de Promociones y Descuentos -->
+        <div class="policy-item">
+          <img src="https://www.marketingdirecto.com/wp-content/uploads/2018/03/oferta.jpg" alt="Promociones" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Promociones y Descuentos</h2>
+            <p>Ofrecemos regularmente promociones y descuentos exclusivos para nuestros clientes registrados. Estas promociones
+              pueden incluir descuentos por volumen, ofertas especiales por temporadas y cupones de fidelidad.</p>
+            <p>Para aprovechar estas ofertas, asegúrate de estar suscrito a nuestro boletín y de seguirnos en nuestras redes
+              sociales. Las promociones están sujetas a términos y condiciones específicos, que se detallarán en cada oferta.</p>
+          </div>
+        </div>
+
+        <!-- Política de Confianza y Transparencia -->
+        <div class="policy-item">
+          <img src="https://www.ermua.eus/sites/default/files/styles/escalar_a_ancho_1768px/public/repositorio-imagenes/Office%20workers%20organizing%20data%20storage.jpg?itok=iu9p6WX6" alt="Confianza" class="policy-image">
+          <div class="policy-content">
+            <h2>Política de Confianza y Transparencia</h2>
+            <p>Nos enorgullecemos de mantener una relación transparente y honesta con nuestros clientes. Todos los productos y
+              servicios ofrecidos en nuestra tienda son verificados para garantizar que cumplan con los más altos estándares de
+              calidad.</p>
+            <p>Siempre proporcionamos descripciones claras y precisas de los productos, y nuestras políticas están diseñadas
+              para ser justas y comprensibles. Si tienes alguna pregunta, nuestro equipo está aquí para ayudarte.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terms of Service Section -->
+      <div id="terms" class="section terms-section">
+
+        <h2>Términos de servicio</h2>
+        <p>Revisa nuestros términos para navegar en nuestra web de la mejor forma posible.</p>
+        <div class="terms-logo">
+          <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Logo de la tienda" class="floating-logo">
+        </div>
+        <div class="terms-content">
+          <ul class="terms-list">
+            <li>
+              <div class="terms-item">
+                <img width="600px" src="https://storage.googleapis.com/twg-content/original_images/hero_1N9ts9Z.jpg" alt="Privacidad" class="floating-image">
+                <p> <strong>
+                    <h1>Privacidad<h1>
+                  </strong>
+                <p> Respetamos tu privacidad y nos comprometemos a proteger tu información personal de acuerdo con las mejores prácticas de la industria.</p>
+              </div>
+            </li>
+            <li>
+              <div class="terms-item">
+                <img width="600px" src="https://revista.condusef.gob.mx/wp-content/uploads/2022/03/pago_265.jpg" alt="Pagos" class="floating-image">
+                <p> <strong>
+                    <h1>Pagos<h1>
+                  </strong>
+                <p>Todos los pagos deben realizarse a través de métodos seguros. Aceptamos tarjetas de crédito, PayPal y otros servicios de pago reconocidos.</p>
+              </div>
+            </li>
+            <li>
+              <div class="terms-item">
+                <img width="600px" src="https://storage.googleapis.com/twg-content/images/sustainability-thumbnail.original.width-800.format-webp_pqEGy01.webp" alt="Envíos y Devoluciones" class="floating-image">
+                <p> <strong>
+                    <h1>Envíos y Devoluciones<h1>
+                  </strong>
+                <p> Ofrecemos políticas claras y justas para envíos y devoluciones, que se detallan en las secciones correspondientes de nuestro sitio web.</p>
+              </div>
+            </li>
+            <li>
+              <div class="terms-item">
+                <img src="https://cdn.goconqr.com/uploads/media/image/19703229/desktop_cfe33aff-772a-4d21-ad9d-1cf54bd15c30.png" alt="Licencias" class="floating-image">
+                <p> <strong>
+                    <h1>Licencias<h1>
+                  </strong> </p>
+                <p> Todos los productos digitales vendidos son bajo licencia y deben usarse de acuerdo con los términos establecidos por los proveedores originales.</p>
+              </div>
+            </li>
+            <li>
+              <div class="terms-item">
+                <img width="500px" src="https://www.comunicare.es/wp-content/uploads/2021/03/crear-pagina-web.jpg" alt="Modificaciones" class="floating-image">
+                <p> <strong>
+                    <h1>Modificaciones<h1>
+                  </strong> </p>
+                <p> Nos reservamos el derecho de modificar estos términos en cualquier momento. Se recomienda a los usuarios revisar esta página periódicamente.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="products" class="section">
+        <h2>Nuestros Productos</h2>
+        <main class="main-containerproducts">
+          <section class="products-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71C2-vc45KL._AC_SX679_.jpg" alt="Teclado Mecánico RGB">
+              <h3>Teclado Mecánico RGB</h3>
+              <p>Teclado mecánico con retroiluminación RGB y teclas personalizables, ideal para gamers y entusiastas.</p>
+              <p class="price">US$79.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61ALdl9N9KL._AC_UL320_.jpg" alt="Ratón Gaming RGB">
+              <h3>Ratón Gaming RGB</h3>
+              <p>Ratón gaming con iluminación RGB y varios botones programables para una experiencia de juego superior.</p>
+              <p class="price">US$39.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71GUE1+MS6L._AC_SX679_.jpg" alt="Monitor 27 4K">
+              <h3>Monitor 27" 4K</h3>
+              <p>Monitor 4K de 27 pulgadas con resolución ultra alta para una claridad y detalle excepcionales.</p>
+              <p class="price">US$299.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71LV5IJRE-L._AC_SX425_.jpg" alt="Auriculares Gaming">
+              <h3>Auriculares Gaming</h3>
+              <p>Auriculares con sonido envolvente y micrófono ajustable, perfectos para largas sesiones de juego.</p>
+              <p class="price">US$89.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/515zJuJOFqL._AC_SX679_.jpg" alt="Webcam HD">
+              <h3>Webcam HD</h3>
+              <p>Webcam Full HD con enfoque automático y micrófono integrado para videollamadas claras y nítidas.</p>
+              <p class="price">US$49.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71OnsJgXOnL._AC_SX679_.jpg" alt="Soporte para Monitor">
+              <h3>Soporte para Monitor</h3>
+              <p>Soporte ajustable para monitor con altura y ángulo regulables para una postura ergonómica.</p>
+              <p class="price">US$29.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71QvB5uMEpL._AC_SL1500_.jpg" alt="Teclado Compacto">
+              <h3>Teclado Compacto</h3>
+              <p>Teclado compacto y portátil con teclas silenciosas, ideal para trabajo en movimiento.</p>
+              <p class="price">US$29.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71wHb5bLXIL._AC_SL1500_.jpg" alt="Hub USB">
+              <h3>Hub USB</h3>
+              <p>Hub USB de 4 puertos para conectar múltiples dispositivos a tu computadora al mismo tiempo.</p>
+              <p class="price">US$15.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61q2nQU13nL._AC_SX679_.jpg">
+              <h3>Altavoz Bluetooth</h3>
+              <p>Altavoz Bluetooth portátil con excelente calidad de sonido y batería de larga duración.</p>
+              <p class="price">US$39.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71IlRZgn5lL._AC_SL1500_.jpg" alt="Cámara Web">
+              <h3>Cámara Web</h3>
+              <p>Cámara web con alta definición y micrófono incorporado, ideal para transmisiones y videoconferencias.</p>
+              <p class="price">US$55.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 11 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81T-8fWlVfL._AC_SL1500_.jpg" alt="Cargador Inalámbrico">
+              <h3>Cargador Inalámbrico</h3>
+              <p>Cargador inalámbrico rápido compatible con la mayoría de los dispositivos móviles.</p>
+              <p class="price">US$25.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71YgkCn0eFL._AC_SL1500_.jpg" alt="Mouse Pad XL">
+              <h3>Mouse Pad XL</h3>
+              <p>Alfombrilla para ratón de gran tamaño con superficie antideslizante y bordes cosidos.</p>
+              <p class="price">US$19.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 13 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71uh2b8A4zL._AC_SL1500_.jpg" alt="Cable HDMI 4K">
+              <h3>Cable HDMI 4K</h3>
+              <p>Cable HDMI de alta velocidad con soporte para resoluciones 4K y 3D.</p>
+              <p class="price">US$12.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 14 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61fCSJ1U5tL._AC_SL1500_.jpg" alt="Batería Externa">
+              <h3>Batería Externa</h3>
+              <p>Batería externa de alta capacidad con puerto USB-C para carga rápida.</p>
+              <p class="price">US$49.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 15 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71tZjzB4DVL._AC_SL1500_.jpg" alt="SSD Externo 1TB">
+              <h3>SSD Externo 1TB</h3>
+              <p>Unidad de estado sólido externa de 1TB con alta velocidad de transferencia.</p>
+              <p class="price">US$129.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 16 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81IoBvi-d5L._AC_SL1500_.jpg" alt="Teclado Numérico USB">
+              <h3>Teclado Numérico USB</h3>
+              <p>Teclado numérico con conexión USB, ideal para contabilidad y entrada de datos.</p>
+              <p class="price">US$15.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 17 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71LgIN7RhdL._AC_SL1500_.jpg" alt="Adaptador USB-C a HDMI">
+              <h3>Adaptador USB-C a HDMI</h3>
+              <p>Adaptador USB-C a HDMI para conectar tu dispositivo móvil a pantallas de alta resolución.</p>
+              <p class="price">US$19.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 18 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71bvhV99R5L._AC_SL1500_.jpg" alt="Cámara de Seguridad WiFi">
+              <h3>Cámara de Seguridad WiFi</h3>
+              <p>Cámara de seguridad WiFi con visión nocturna y detección de movimiento.</p>
+              <p class="price">US$59.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 19 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71RpSxQ9JfL._AC_SL1500_.jpg" alt="Router WiFi 6">
+              <h3>Router WiFi 6</h3>
+              <p>Router con tecnología WiFi 6 para una conexión más rápida y estable en toda tu casa.</p>
+              <p class="price">US$129.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 20 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71-J42kz7UL._AC_SL1500_.jpg" alt="Cámara de Acción 4K">
+              <h3>Cámara de Acción 4K</h3>
+              <p>Cámara de acción con grabación en 4K y resistente al agua para capturar tus aventuras.</p>
+              <p class="price">US$99.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 21 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71Ozl8OQ5eL._AC_SL1500_.jpg" alt="Micrófono Condensador USB">
+              <h3>Micrófono Condensador USB</h3>
+              <p>Micrófono de condensador con conexión USB, perfecto para grabación de podcasts y streaming.</p>
+              <p class="price">US$49.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 22 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71LeDqdbfDL._AC_SL1500_.jpg" alt="Estación de Carga USB">
+              <h3>Estación de Carga USB</h3>
+              <p>Estación de carga con múltiples puertos USB para cargar todos tus dispositivos al mismo tiempo.</p>
+              <p class="price">US$29.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 23 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71lYC0lP7kL._AC_SL1500_.jpg" alt="Cable Lightning a USB-C">
+              <h3>Cable Lightning a USB-C</h3>
+              <p>Cable Lightning a USB-C para cargar y sincronizar tus dispositivos Apple de forma rápida.</p>
+              <p class="price">US$19.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 24 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61S1gKT5qPL._AC_SL1500_.jpg" alt="Cámara Inalámbrica Exterior">
+              <h3>Cámara Inalámbrica Exterior</h3>
+              <p>Cámara de seguridad exterior con conexión inalámbrica y resistente a la intemperie.</p>
+              <p class="price">US$79.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 25 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81FJylMZ0yL._AC_SL1500_.jpg" alt="Tableta Gráfica">
+              <h3>Tableta Gráfica</h3>
+              <p>Tableta gráfica con lápiz sensible a la presión para ilustración y diseño gráfico.</p>
+              <p class="price">US$69.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 26 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71bJoQHeaDL._AC_SL1500_.jpg" alt="Controlador MIDI">
+              <h3>Controlador MIDI</h3>
+              <p>Controlador MIDI con pads y faders, perfecto para producción musical y DJing.</p>
+              <p class="price">US$129.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 27 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71H5Mb6L1cL._AC_SL1500_.jpg" alt="Lámpara de Escritorio LED">
+              <h3>Lámpara de Escritorio LED</h3>
+              <p>Lámpara de escritorio con luz LED ajustable y control táctil.</p>
+              <p class="price">US$35.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 28 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61AYf2N5eAL._AC_SL1500_.jpg" alt="Soporte para Teléfono">
+              <h3>Soporte para Teléfono</h3>
+              <p>Soporte ajustable para teléfono móvil, ideal para ver videos o realizar videollamadas.</p>
+              <p class="price">US$15.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 29 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71DLz2SNzGL._AC_SL1500_.jpg" alt="Monitor Ultrawide 34">
+              <h3>Monitor Ultrawide 34"</h3>
+              <p>Monitor ultrawide de 34 pulgadas con resolución QHD y alta frecuencia de actualización.</p>
+              <p class="price">US$499.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 30 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71-5oXYD-1L._AC_SL1500_.jpg" alt="Teclado Gaming Mecánico">
+              <h3>Teclado Gaming Mecánico</h3>
+              <p>Teclado mecánico con switches rápidos y retroiluminación RGB para gamers profesionales.</p>
+              <p class="price">US$119.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 31 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81Mfcyb6ckL._AC_SL1500_.jpg" alt="Base Refrigerante para Laptop">
+              <h3>Base Refrigerante para Laptop</h3>
+              <p>Base refrigerante con ventiladores para mantener tu laptop fresca durante largas sesiones de uso.</p>
+              <p class="price">US$29.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 32 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61ScBRkVXpL._AC_SL1500_.jpg" alt="Foco Inteligente">
+              <h3>Foco Inteligente</h3>
+              <p>Foco LED inteligente con control mediante app y compatible con asistentes de voz.</p>
+              <p class="price">US$22.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 33 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61SQKQB9k0L._AC_SL1500_.jpg" alt="Auriculares Inalámbricos Bluetooth">
+              <h3>Auriculares Inalámbricos Bluetooth</h3>
+              <p>Auriculares inalámbricos con sonido de alta calidad y batería de larga duración.</p>
+              <p class="price">US$39.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 34 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71ehXTAm4eL._AC_SL1500_.jpg" alt="Batería Externa 20000mAh">
+              <h3>Batería Externa 20000mAh</h3>
+              <p>Batería externa de alta capacidad para cargar tus dispositivos en cualquier lugar.</p>
+              <p class="price">US$49.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 35 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71h-93F6FFL._AC_SL1500_.jpg" alt="Ratón Gaming Inalámbrico">
+              <h3>Ratón Gaming Inalámbrico</h3>
+              <p>Ratón gaming inalámbrico con sensor de alta precisión y botones programables.</p>
+              <p class="price">US$79.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 36 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71b-eq8NmML._AC_SL1500_.jpg" alt="Cargador Inalámbrico Rápido">
+              <h3>Cargador Inalámbrico Rápido</h3>
+              <p>Cargador inalámbrico rápido compatible con dispositivos Qi.</p>
+              <p class="price">US$29.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 37 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71Zn53ZZSUL._AC_SL1500_.jpg" alt="Monitor de Frecuencia Cardíaca">
+              <h3>Monitor de Frecuencia Cardíaca</h3>
+              <p>Monitor de frecuencia cardíaca para seguimiento de salud y estado físico.</p>
+              <p class="price">US$99.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 38 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81IlHcvnX2L._AC_SL1500_.jpg" alt="Altavoz Inteligente con Alexa">
+              <h3>Altavoz Inteligente con Alexa</h3>
+              <p>Altavoz inteligente con integración de Alexa para controlar tu hogar con comandos de voz.</p>
+              <p class="price">US$89.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 39 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71dfqDW8h3L._AC_SL1500_.jpg" alt="Enchufe Inteligente WiFi">
+              <h3>Enchufe Inteligente WiFi</h3>
+              <p>Enchufe inteligente controlado por WiFi para automatizar dispositivos en tu hogar.</p>
+              <p class="price">US$19.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 40 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61zN9mN9LvL._AC_SL1500_.jpg" alt="Cargador para Coche">
+              <h3>Cargador para Coche</h3>
+              <p>Cargador para coche con múltiples puertos USB para cargar dispositivos mientras conduces.</p>
+              <p class="price">US$24.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 41 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/51zSlpNMnAS._AC_SX679_.jpg" alt="Gafas de Realidad Virtual">
+              <h3>Gafas de Realidad Virtual</h3>
+              <p>Gafas de realidad virtual para una experiencia inmersiva en videojuegos y contenido multimedia.</p>
+              <p class="price">US$299.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 42 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61v+z3jRfyL._AC_SL1500_.jpg" alt="Teclado Ergonómico">
+              <h3>Teclado Ergonómico</h3>
+              <p>Teclado ergonómico diseñado para reducir la fatiga durante largas sesiones de escritura.</p>
+              <p class="price">US$59.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 43 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61qlF5wGi4L._AC_SL1500_.jpg" alt="Auriculares Gaming con Micrófono">
+              <h3>Auriculares Gaming con Micrófono</h3>
+              <p>Auriculares gaming con sonido envolvente y micrófono con cancelación de ruido.</p>
+              <p class="price">US$79.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 44 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71I6GmB7eJL._AC_SL1500_.jpg" alt="Cámara Web Full HD">
+              <h3>Cámara Web Full HD</h3>
+              <p>Cámara web con resolución Full HD para videollamadas nítidas y claras.</p>
+              <p class="price">US$49.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 45 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81-F6z-uyFL._AC_SL1500_.jpg" alt="Soporte de Monitor Ajustable">
+              <h3>Soporte de Monitor Ajustable</h3>
+              <p>Soporte ajustable para monitor, ideal para una configuración ergonómica de escritorio.</p>
+              <p class="price">US$39.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 46 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61-8xG64t9L._AC_SL1500_.jpg" alt="SSD Externo 1TB">
+              <h3>SSD Externo 1TB</h3>
+              <p>SSD externo de 1TB con alta velocidad de transferencia para almacenamiento portátil.</p>
+              <p class="price">US$119.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 47 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71zLSEuWuUL._AC_SL1500_.jpg" alt="Cámara de Tablero para Coche">
+              <h3>Cámara de Tablero para Coche</h3>
+              <p>Cámara de tablero para coche con grabación en HD y visión nocturna.</p>
+              <p class="price">US$89.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 48 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/71uGxi17FEL._AC_SL1500_.jpg" alt="Control Remoto Universal">
+              <h3>Control Remoto Universal</h3>
+              <p>Control remoto universal compatible con una amplia variedad de dispositivos.</p>
+              <p class="price">US$19.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 49 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/81P0KV-23rL._AC_SL1500_.jpg" alt="Router WiFi de Alta Velocidad">
+              <h3>Router WiFi de Alta Velocidad</h3>
+              <p>Router WiFi de alta velocidad con cobertura amplia para conexiones estables.</p>
+              <p class="price">US$129.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+            <!-- Producto 50 -->
+            <div class="product-card">
+              <img src="https://m.media-amazon.com/images/I/61mBL58BdEL._AC_SL1500_.jpg" alt="Soporte de Teléfono para Escritorio">
+              <h3>Soporte de Teléfono para Escritorio</h3>
+              <p>Soporte de teléfono ajustable para escritorio, ideal para videollamadas y multitarea.</p>
+              <p class="price">US$14.99</p>
+              <button class="btn-add-to-cart">Agregar al carrito</button>
+            </div>
+
+      </div>
+      </section>
+
+      <!-- Cart Section -->
+      <div id="cart" class="section">
+        <h2>Tu Carrito</h2>
+        <div id="cart-items"></div>
+        <!-- Contenido del carrito -->
+        <main class="checkout-container">
+          <div class="checkout-header">
+            <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Logo" class="checkout-logo">
+            <h2>Carrito - Información - Envíos - Pago</h2>
+          </div>
+
+          <div class="payment-options">
+            <button class="payment-btn shop-pay">
+              <i class="fab fa-shopify payment-icon"></i> Shop Pay
+            </button>
+            <button class="payment-btn paypal">
+              <i class="fab fa-paypal payment-icon"></i> PayPal
+            </button>
+            <button class="payment-btn gpay">
+              <i class="fab fa-google payment-icon"></i> Pay
+            </button>
+          </div>
+
+          <form class="checkout-form">
+            <section class="contact-info">
+              <h3>Información de Contacto</h3>
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required>
+              <div class="checkbox">
+                <input type="checkbox" id="subscribe" name="subscribe" checked>
+                <label for="subscribe">Enviarme novedades y ofertas por correo electrónico</label>
+              </div>
+            </section>
+
+            <section class="shipping-info">
+              <h3>Información de Envío</h3>
+              <label for="country">País/Región</label>
+              <select id="country" name="country" required onchange="toggleOtherCountryField()">
+                <option value="">Seleccione un país</option>
+                <option value="us">Estados Unidos</option>
+                <option value="cn">China</option>
+                <option value="de">Alemania</option>
+                <option value="uk">Reino Unido</option>
+                <option value="fr">Francia</option>
+                <option value="jp">Japón</option>
+                <option value="ca">Canadá</option>
+                <option value="au">Australia</option>
+                <option value="br">Brasil</option>
+                <option value="in">India</option>
+                <option value="do">República Dominicana</option>
+                <option value="other">Otro</option>
+              </select>
+
+              <div id="other-country-container" style="display: none;">
+                <label for="other-country">Especifica tu país</label>
+                <input type="text" id="other-country" name="other-country" placeholder="Nombre del país">
+              </div>
+
+              <label for="first-name">Nombre</label>
+              <input type="text" id="first-name" name="first-name" required>
+
+              <label for="last-name">Apellido</label>
+              <input type="text" id="last-name" name="last-name" required>
+
+              <label for="address">Calle y número de casa</label>
+              <input type="text" id="address" name="address" required>
+            </section>
+
+            <section class="cart-summary">
+              <h1>Resumen del pedido</h1>
+              <div id="cart-items" class="cart-items">
+                <!-- Aquí se mostrarán los productos del carrito -->
+              </div>
+              <div class="total">
+                <h1>Total: $<span id="cart-total">0.00</span></h1>
+              </div>
+              <button class="checkout-btn">Proceder al Pago</button>
+            </section>
+
+            <section class="discount-code">
+              <label for="discount-code">Tarjeta de regalo o código de descuento</label>
+              <input type="text" id="discount-code" placeholder="Ingrese código">
+              <button type="button">Usar</button>
+            </section>
+          </form>
+
+          <section class="order-summary">
+            <p>Subtotal: 35.99 $</p>
+            <p>Envíos: Calculado en el siguiente paso</p>
+            <h1>Total: "" $</h1>
+          </section>
+      </div>
+
+      <script>
+        function toggleOtherCountryField() {
+          const countrySelect = document.getElementById('country');
+          const otherCountryContainer = document.getElementById('other-country-container');
+          otherCountryContainer.style.display = countrySelect.value === 'other' ? 'block' : 'none';
+        }
+      </script>
+
+      <!-- Contact Section -->
+      <div id="contact" class="section">
+        <h2>Contacto</h2>
+        <p>Alguna duda o sugerencia? Ponte en contacto con nosotros a través de este formulario.</p>
+        <form>
+          <label for="nombreapellido">Nombre y Apellido</label>
+          <input type="text" id="nombreapellido" required>
+
+          <label for="correoelectronico">Correo Electrónico</label>
+          <input type="email" id="correoelectronico" required placeholder="fulano@email.com">
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" required placeholder="(829)-XXX-XXXX">
+
+          <label for="mensaje">Mensaje</label>
+          <textarea cols="70" rows="10" id="mensaje" required></textarea>
+
+          <input type="submit" value="Enviar formulario">
+        </form>
+      </div>
     </div>
-    <div id="signin" class="section">
-      <title>SingIn Page</title>
 
-      <p> hola
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#"><img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Mystore Logo" width="100" height="100"></a>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#" onclick="showSection('about')">Acerca de nosotros</a></li>
+            <li><a href="#" onclick="showSection('privacy')">Políticas </a></li>
+            <li><a href="#" onclick="showSection('terms')">Terminos de servicio</a></li>
+          </ul>
+        </div>
+        <div class="footer-subscribe">
+          <p>Únete a nuestra comunidad y recibe un 10% de descuento en tu primera compra!!!</p>
+          <form>
+            <input type="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Suscribirse</button>
+          </form>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon"><img src="https://img.icons8.com/?size=100&id=13912&format=png&color=000000" alt="Facebook" width="30" height="30"></a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon"><img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter" width="30" height="30"></a>
+          <a href="https://www.youtube.com" target="_blank" class="social-icon"><img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube" width="30" height="30"></a>
+          <a href="https://www.instagram.com" target="_blank" class="social-icon"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" width="30" height="30"></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Mystore. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
-  </body>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <a href="#">
-        <img src="https://cdn.pixabay.com/photo/2016/12/20/05/24/store-1919713_1280.png" alt="Mystore Logo" width="100" height="100">
-      </a>
-    </div>
-
-    <div class="footer-links">
-
-      <ul>
-        <navaboutus>
-          <li><a href="#" onclick="showSection('about')">About Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </navaboutus>
-        </nav>
-    </div>
-
-    <div class="footer-subscribe">
-      <p>Únete a nuestra comunidad y recibe un 10% de descuento en tu primera compra</p>
-      <p>+ 5% extra mensual solo por afiliar tu tarjeta de crédito totalmente GRATIS!</p>
-      <form action="#" method="POST">
-        <input type="email" placeholder="Tu correo electrónico" required>
-        <button type="submit">Suscribirse</button>
-      </form>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://www.facebook.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/?size=100&id=13912&format=png&color=000000" alt="Facebook" width="30" height="30">
-      </a>
-      <a href="https://www.twitter.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000" alt="Twitter" width="30" height="30">
-      </a>
-      <a href="https://www.youtube.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube" width="30" height="30">
-      </a>
-      <a href="https://www.instagram.com" target="_blank" class="social-icon">
-        <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram" width="30" height="30">
-      </a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2024 Mystore. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-</body>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"> </script>
 </body>
 
 </html>
